@@ -1,0 +1,278 @@
+extends _template
+
+block main
+	//calc
+	section.home-calc.bg-gray
+		.container
+			.section-header
+				h2 Рассчитайте свой доход
+				p Калькулятор доходности
+			.calc.clearfix.fadeInUpShort.wow
+				.left
+					.calc-param
+						.calc-param__header.dt--header
+							.dtc
+								span.title Какую сумму Вы хотите вложить?
+							.dtc
+								input(type="text").slider-value
+						.slider(style="height: 80px;")
+							#calcSliderInit
+					.calc-param
+						.calc-param__header.dt--header
+							.dtc
+								span.title На какой срок?
+							.dtc
+								span.percent <span>Ставка:</span> 15.73%
+						.time-line
+							.time-line__progress
+							label
+								input(type="radio" name="time-line")
+								span.condition 1
+								span.text 1 мес
+							label
+								input(type="radio" name="time-line")
+								span.condition 3
+								span.text 3 мес
+							label
+								input(type="radio" name="time-line")
+								span.condition 6
+								span.text 6 мес
+							label
+								input(type="radio" name="time-line")
+								span.condition 9
+								span.text 9 мес
+							label
+								input(type="radio" name="time-line")
+								span.condition 12
+								span.text 12 мес
+				.right
+					.calc-output
+						p Через 3 месяца
+						p.tt Вы получите
+						output#final-value
+							span.val 0
+							span.currency руб
+						p Доход по сбережению
+						output#income
+							span.val 0
+							span.currency руб
+						a(href="#").btn.btn--yellow.big Полный расчет
+	section.home-about
+		.container
+			.section-header.fadeInLeftShort.wow
+				h2 О нас
+			.row
+				
+				.col-md-7.col-lg-offset-1.col-lg-6.pull-right
+					ul.home-about__features
+						li.features-circle(data-percent="25")
+							svg(viewbox="0 0 156 156").icon
+								circle.main(cx="78" cy="78" r="70" )
+								circle.bar(cx="78" cy="78" r="70" data-color="#F7E12A")
+								text(x="50%" y="50%" dy=".4em").icm &#xe91b;
+							.text
+								p Сейчас на сайте
+								span.count 2 365
+						li.features-circle(data-percent="50")
+							svg(viewbox="0 0 156 156").icon
+								circle.main(cx="78" cy="78" r="70" )
+								circle.bar(cx="78" cy="78" r="70"  data-color="#F7E12A")
+								text(x="50%" y="50%" dy=".4em").icm &#xe900;
+							.text
+								p Инвестировано
+								span.count 17 365 945
+						li.features-circle(data-percent="75 ")
+							svg(viewbox="0 0 156 156").icon
+								circle.main(cx="78" cy="78" r="70" )
+								circle.bar(cx="78" cy="78" r="70"  data-color="#F7E12A")
+								text(x="50%" y="50%" dy=".4em").icm &#xe901;
+							.text
+								p Выплачено
+								span.count 2 357 943
+				.col-md-5.pull-left
+					p.mb-60.fadeInLeftShort.wow Кредитный кооператив “ВашДоход” — действующий член Ассоциации "Саморегулируемая организация кредитных потребительских кооперативов "Кооперативные Финансы". Ассоциация обеспечивает имущественную ответственность кредитного кооператива и контролирует его деятельность. Ведём прозрачную отчётность по стандартам и делаем отчисления в компенсационный фонд, средства которого используются для выполнения обязательств кооператива перед пайщиками
+					a(href="#").fadeInLeftShort.wow.btn.btn--yellow.big Узнать больше
+	section.home-features
+		.section-header
+			h2 Наши приемущества
+			p Почему мы лучше других ?
+		.container.clearfix
+			.col-sm-6.col
+				.wrap: .home-features__item
+					i.icm.icon-magnifier.fadeInUpShort.wow
+						span.path1
+						span.path2
+						span.path3
+						span.path4
+						span.path5
+						span.path6
+					.text.wow.fadeIn
+						.name Прозрачность
+						p Каждый выданный заем обеспечен залогом в виде недвижимости или транспортного средства, рыночная стоимость которых в полтора раза превышает сумму займа
+			.col-sm-6.col
+				.wrap: .home-features__item
+					i.icm.icon-badge.fadeInUpShort.wow
+						span.path1
+						span.path2
+						span.path3
+						span.path4
+					.text.wow.fadeIn
+						.name Прозрачность
+						p Каждый выданный заем обеспечен залогом в виде недвижимости или транспортного средства, рыночная стоимость которых в полтора раза превышает сумму займа
+			.col-sm-6.col
+				.wrap: .home-features__item
+					i.icm.icon-bag.fadeInUpShort.wow
+						span.path1
+						span.path2
+					.text.wow.fadeIn
+						.name Прозрачность
+						p Каждый выданный заем обеспечен залогом в виде недвижимости или транспортного средства, рыночная стоимость которых в полтора раза превышает сумму займа
+			.col-sm-6.col
+				.wrap: .home-features__item
+					i.icm.icon-pig.fadeInUpShort.wow
+						span.path1
+						span.path2
+						span.path3
+						span.path4
+					.text.wow.fadeIn
+						.name Прозрачность
+						p Каждый выданный заем обеспечен залогом в виде недвижимости или транспортного средства, рыночная стоимость которых в полтора раза превышает сумму займа
+	section.home-referal.bg-gray
+		.container
+			.home-referal__inner
+				.section-header
+					h2 Реферальная программа
+				p Кредитный кооператив “ВашДоход” — действующий член Ассоциации "Саморегулируемая организация кредитных потребительских кооперативов "Кооперативные Финансы".
+				p Ассоциация обеспечивает имущественную ответственность кредитного кооператива и контролирует его деятельность. Ведём прозрачную отчётность по стандартам и делаем отчисления в компенсационный фонд
+				ul.referal-digits
+					li.fadeInLeftShort().wow
+						span 1 уровень
+						span.digit 8%
+					li.fadeInLeftShort(data-wow-delay=".5s").wow
+						span 1 уровень
+						span.digit 5%
+					li.fadeInLeftShort(data-wow-delay="1s").wow
+						span 1 уровень
+						span.digit 2%
+	section.home-stat
+		.container
+			.section-header.fadeInUpShort.wow
+				h2 Статистика проекта
+				p Наши достижения
+			.home-stat__body
+				.row
+					.col-md-3.col-sm-6
+						.home-stat__item.fadeInUpShort.wow(data-wow-delay="0")
+							.name Новые вклады
+							table
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+					.col-md-3.col-sm-6
+						.home-stat__item.fadeInUpShort.wow(data-wow-delay=".4s")
+							.name Новые вклады
+							table
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+					.col-md-3.col-sm-6
+						.home-stat__item.bg-yellow.fadeInUpShort.wow(data-wow-delay=".6s")
+							.name Топовые инвесторы
+							table
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+					.col-md-3.col-sm-6
+						.home-stat__item.fadeInUpShort.wow(data-wow-delay=".8s")
+							.name Топовые рефоводы
+							table
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+								tr
+									td natasha
+									td 510 руб
+								tr
+									td valera
+									td 12 510 руб
+								tr
+									td tygrew
+									td 200 510 руб
+	section.home-reviews.bg-gray-light
+		.container
+			.section-header
+				h2 Отзывы о нас
+				p Что говорят наши клиенты
+			.owl-carousel#reviewsCarousel
+				-for(i=0;i<10;i++)
+					.home-reviews__item
+						.date 24.05.2017
+						.dt.name
+							.dtc: .photo: img(src="img/user-photo.png", alt="")
+							.dtc Артем реут
+						p.comment Строительные материалы ежегодно совершенствуются и не перестают удивлять.…
+						a(href="#").more
+							i.icm.icon-eye
+							span Читать полностью
+	section.home-partners
+		.container
+			.section-header
+				h2 Наши партнеры
+				p Нам доверяют
+			ul#partnersCarousel.owl-carousel
+				li.home-partners__item: img(src="img/partner1.png", alt="")
+				li.home-partners__item: img(src="img/partner2.png", alt="")
+				li.home-partners__item: img(src="img/partner3.png", alt="")
+				li.home-partners__item: img(src="img/partner4.png", alt="")
+				li.home-partners__item: img(src="img/partner4.png", alt="")
