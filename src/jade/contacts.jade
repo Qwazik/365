@@ -1,0 +1,20 @@
+extends _template-inner
+
+block main
+	.contacts-page
+		#map
+		.container
+			.map-info
+				h2 Контакты
+				ul.map-info__body
+					li
+						span.title Адрес
+						.text 123103 Брянск,<br> ул. Литейная 15
+					li
+						span.title Телефон
+						.text <b>+7 (4832) 30-06-09</b>
+						span.small-text По России бесплатно
+					li
+						span.title График работы
+						.text Пн-Пт, 08:00-18:00  <br>Сб, 08:00-15:00 <br> Вс, выходной
+				a(href="#").btn.btn--yellow.big Заказать звонок

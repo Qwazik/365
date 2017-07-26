@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?2ln8th');
-  src:  url('../fonts/icomoon.eot?2ln8th#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?2ln8th') format('truetype'),
-    url('../fonts/icomoon.woff?2ln8th') format('woff'),
-    url('../fonts/icomoon.svg?2ln8th#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?1ldi8n');
+  src:  url('../fonts/icomoon.eot?1ldi8n#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1ldi8n') format('truetype'),
+    url('../fonts/icomoon.woff?1ldi8n') format('woff'),
+    url('../fonts/icomoon.svg?1ldi8n#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 .icm {
-  /* use !important to prevent issues with browser extensions that change fonts */
+  /* use !important to prevent issues with browser extensions that change ../fonts/ */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -24,115 +24,126 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-about2:before {
-  content: "\e900";
-}
-.icon-about3:before {
-  content: "\e901";
-}
-.icon-artl:before {
-  content: "\e902";
+.icon-chevron-b:before {
+  content: "\e91d";
 }
 .icon-artr:before {
-  content: "\e903";
+  content: "\e900";
 }
 .icon-badge .path1:before {
-  content: "\e904";
+  content: "\e901";
   color: rgb(254, 231, 47);
 }
 .icon-badge .path2:before {
-  content: "\e905";
+  content: "\e902";
   margin-left: -0.7314453125em;
   color: rgb(0, 0, 0);
 }
 .icon-badge .path3:before {
-  content: "\e906";
+  content: "\e903";
   margin-left: -0.7314453125em;
   color: rgb(0, 0, 0);
 }
 .icon-badge .path4:before {
-  content: "\e907";
+  content: "\e904";
   margin-left: -0.7314453125em;
   color: rgb(0, 0, 0);
 }
 .icon-bag .path1:before {
-  content: "\e908";
+  content: "\e905";
   color: rgb(254, 231, 47);
 }
 .icon-bag .path2:before {
-  content: "\e909";
-  margin-left: -1em;
+  content: "\e906";
+  margin-left: -1.255859375em;
   color: rgb(0, 0, 0);
 }
 .icon-eye:before {
-  content: "\e90a";
+  content: "\e907";
 }
 .icon-fb:before {
-  content: "\e90b";
+  content: "\e908";
+  color: #23abd0;
 }
 .icon-gp:before {
-  content: "\e90c";
+  content: "\e909";
+  color: #23abd0;
 }
 .icon-inst:before {
-  content: "\e90d";
+  content: "\e90a";
+  color: #23abd0;
 }
 .icon-magnifier .path1:before {
-  content: "\e90e";
+  content: "\e90b";
   color: rgb(254, 231, 47);
 }
 .icon-magnifier .path2:before {
-  content: "\e90f";
+  content: "\e90c";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
 .icon-magnifier .path3:before {
-  content: "\e910";
+  content: "\e90d";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
 .icon-magnifier .path4:before {
-  content: "\e911";
+  content: "\e90e";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
 .icon-magnifier .path5:before {
-  content: "\e912";
+  content: "\e90f";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
 .icon-magnifier .path6:before {
-  content: "\e913";
+  content: "\e910";
   margin-left: -1em;
   color: rgb(0, 0, 0);
 }
 .icon-mouse:before {
-  content: "\e914";
+  content: "\e911";
+}
+.icon-person:before {
+  content: "\e912";
 }
 .icon-pig .path1:before {
-  content: "\e915";
+  content: "\e913";
   color: rgb(0, 0, 0);
 }
 .icon-pig .path2:before {
-  content: "\e916";
+  content: "\e914";
   margin-left: -0.923828125em;
   color: rgb(0, 0, 0);
 }
 .icon-pig .path3:before {
-  content: "\e917";
+  content: "\e915";
   margin-left: -0.923828125em;
   color: rgb(0, 0, 0);
 }
 .icon-pig .path4:before {
-  content: "\e918";
+  content: "\e916";
   margin-left: -0.923828125em;
   color: rgb(254, 231, 47);
 }
 .icon-tw:before {
-  content: "\e919";
+  content: "\e917";
+  color: #23abd0;
 }
 .icon-vk:before {
-  content: "\e91a";
+  content: "\e918";
+  color: #23abd0;
 }
 .icon-about1:before {
+  content: "\e919";
+}
+.icon-about2:before {
+  content: "\e91a";
+}
+.icon-about3:before {
   content: "\e91b";
+}
+.icon-artl:before {
+  content: "\e91c";
 }

@@ -1,5 +1,5 @@
+
 $(function(){
-	new WOW().init();
 	$('.features-circle .bar').each(function(){
 		var c = calcDashOffset($(this).closest('.features-circle').data('percent'), $(this))[0]
 		$(this).css('strokeDashoffset',c);
@@ -51,29 +51,50 @@ $(function(){
 	});
 
 	(function(){
-		var calcRangeSlider = $('#calcSliderInit')[0];
-		var output = $(calcRangeSlider).closest('.calc-param').find('.slider-value');
+		var tabs = $('.tabs'),
+			tabsNav = tabs.find('.tabs-nav');
+			tabsBody = tabs.find('.tabs-main');
+		tabsNav.find('li').click(function(){
+			$(this).siblings('li').removeClass('active');
+			$(this).addClass('active');
+			$(tabsBody).find('.tabs-body').removeClass('active');
+			$(tabsBody).find('.tabs-body').eq($(this).index()).addClass('active');
+		})
+	}());
 
-		noUiSlider.create(calcRangeSlider, {
-			start: 10000,
-			step: 1000,
-			connect: [true, false],
-			range: {
-				min: 10000,
-				max: 80000
-			},
-			pips: {
-				mode: 'count',
-				values: '8',
-				density: 1.5
-			}
+	(function(){
+		$('.question').click(function(){
+			$(this).closest('.questions__item').toggleClass('open');
+			$(this).siblings('.answer').slideToggle();
 		});
-		output.change(function(){
-			calcRangeSlider.noUiSlider.set([this.value, null])
-		});
-		calcRangeSlider.noUiSlider.on('update', function(values, handle){
-			output.val(values[handle]);
-		});
+	}());
+
+	(function(){
+		var calcRangeSlider = $('#calcSliderInit')[0];
+		if ($('#calcSliderInit').length) {
+			var output = $(calcRangeSlider).closest('.calc-param').find('.slider-value');
+
+			noUiSlider.create(calcRangeSlider, {
+				start: 10000,
+				step: 1000,
+				connect: [true, false],
+				range: {
+					min: 10000,
+					max: 80000
+				},
+				pips: {
+					mode: 'count',
+					values: '8',
+					density: 1.5
+				}
+			});
+			output.change(function(){
+				calcRangeSlider.noUiSlider.set([this.value, null])
+			});
+			calcRangeSlider.noUiSlider.on('update', function(values, handle){
+				output.val(values[handle]);
+			});
+		}
 	}());
 
 	(function(){
@@ -83,12 +104,42 @@ $(function(){
 	}());
 
 
+	if($(".waypoint-circles").length){
 
-	var waypoint = new Waypoint({
-		element: $('.home-about')[0],
-		handler: featuredCircle,
-		offset: '50%'
-	});
+		var waypoint = new Waypoint({
+			element: $('.waypoint-circles')[0],
+			handler: featuredCircle,
+			offset: '50%'
+		});
+	}
+
+	(function(){
+		if($('#map').length){
+
+
+			ymaps.ready(init);
+	        var myMap, 
+	            myPlacemark;
+	        var center;
+	        if($(window).outerWidth() <= 992){
+	        	center = [53.31614907110899,34.27609999999998];
+	        }else{
+	        	center = [53.31614907110899,34.27318175659176]
+	        }
+	        function init(){ 
+	            myMap = new ymaps.Map("map", {
+	                center: center,
+	                zoom: 17
+	            }); 
+	            
+	            myPlacemark = new ymaps.Placemark([53.31614907110899,34.27609999999998], {
+	                
+	            });
+	            
+	            myMap.geoObjects.add(myPlacemark);
+	        }
+        }
+	}());
 
 	function openMobileNav(){
 		$(this).toggleClass('active');
@@ -149,3 +200,4 @@ $(function(){
 	}
 	
 });
+

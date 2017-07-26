@@ -18,6 +18,27 @@
 }
 
 @media screen and (max-width: 992px){
+	#map{
+		height: 300px;
+	}
+	.contacts-page{
+		.container{
+			position: static;
+		}
+		.map-info{
+			position: static;
+			transform: none;
+			padding: 30px 0;
+			&__body{
+				columns: 1;
+				column-count: 1;
+				li{
+					display: inline-block;
+					margin-right: 30px;
+				}
+			}
+		}
+	}
 	html{
 		font-size: 14px;
 	}
@@ -57,6 +78,20 @@
 			margin-bottom: 40px;
 		}
 	}
+	.account{
+		.centered-element{
+			left: 50% !important;
+			transform: translate(-50%,-50%) !important; 
+			right: auto !important;
+		}
+		&-balance{
+			text-align: center;
+			.left,.right{
+				float: none;
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 992px) and (min-width: 767px){
@@ -66,6 +101,14 @@
 	}
 }
 @media screen and (max-width: 767px){
+	.tabs-nav li{
+		width: 100%;
+		margin-top: 20px;
+		
+		&:first-child{
+			margin-top: 0;
+		}
+	}
 	.mobile-menu-btn{
 		display: inline-block;
 	}
@@ -136,11 +179,32 @@
 			a{color: $dark-color;}
 		}
 	}
+	section, .section{
+		    padding: 2.6875rem 0 4.25rem;
+	}
+	.home-features .section-header{
+		padding-bottom: 2.6875rem;
+	}
 
 }
 
 @media screen and (max-width: 480px){
+	.account{
+
+		&-balance{
+			.right{
+				margin: 0;
+				white-space: nowrap;
+			}
+		}
+		
+	}
+
+	.main-header.inner{
+		padding: 1rem 0;
+	}
 	.main-header{
+		padding: 2rem 0;
 		h1{
 			font-size: 2.2em;
 		}
@@ -180,8 +244,12 @@
 		}
 	}
 	.time-line label{
-		width:  37px;
-		height: 37px;
+		width:  rem(37);
+		height: rem(37);
+		.condition span{
+			line-height: 1.1em;
+		}
+
 	}
 
 	.home-features{

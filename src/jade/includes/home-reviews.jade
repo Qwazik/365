@@ -1,0 +1,16 @@
+section.home-reviews.bg-gray-light
+	.container
+		.section-header
+			h2 Отзывы о нас
+			p Что говорят наши клиенты
+		.owl-carousel#reviewsCarousel
+			-for(i=0;i<10;i++)
+				.home-reviews__item
+					.date 24.05.2017
+					.dt.name
+						.dtc: .photo: img(src="img/user-photo.png", alt="")
+						.dtc Артем реут
+					p.comment Строительные материалы ежегодно совершенствуются и не перестают удивлять.…
+					a(href="#").more
+						i.icm.icon-eye
+						span Читать полностью

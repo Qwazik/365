@@ -1,0 +1,76 @@
+extends _template-inner
+
+block main
+	.account.bg-gray
+		.container
+			.row
+				.col-md-6
+					.account-user.account-block.centered
+						.dt.centered-element
+							.dtc
+								.account-user__photo
+									// img(src="https://lc-www-live-s.legocdn.com/r/www/r/catalogs/-/media/catalogs/characters/lbm%20characters/primary/70909_1to1_scubabatman_360_480.png?l.r2=249170262", alt="")
+							.dtc
+								span.gray-text User07
+								span.email User07@mail.ru
+				.col-md-6
+					.account-block.centered.account-balance
+						.centered-element.clerfix
+							.left
+								span.gray-text Баланс
+								span.val 3 200 руб
+							.right
+								a(href="").btn.btn--yellow.big Открыть депозит
+			.row
+				.col-md-3
+					.account-block
+						ul.account-menu
+							li: a(href="") Главная
+							li: a(href="") Открыть вклад
+							li: a(href="") Реинвестировать
+							li.active: a(href="") Мои вклады
+							li: a(href="") Вывод средств
+							li: a(href="") Выход
+				.col-md-9
+					.account-block.account-history
+						p.big-text Мои депозиты
+						.table-wrap
+							table.account-history__table
+								thead
+									tr
+										td Дата
+										td Вложил
+										td Процент
+										td Получу
+										td Начисления
+										td Статус
+								tbody
+									tr
+										td 24.04.2017; 18:39
+										td 2 500 руб
+										td 26% (1.75% в час)
+										td 3 500 руб
+										td 0 / 72
+										td: span.status.status--wait Ожидает
+									tr
+										td 24.04.2017; 18:39
+										td 2 500 руб
+										td 26% (1.75% в час)
+										td 3 500 руб
+										td 0 / 72
+										td: span.status.status--rejected Отклонен
+									tr
+										td 24.04.2017; 18:39
+										td 2 500 руб
+										td 26% (1.75% в час)
+										td 3 500 руб
+										td 0 / 72
+										td: span.status.status--success Успешно
+									tr
+										td 24.04.2017; 18:39
+										td 2 500 руб
+										td 26% (1.75% в час)
+										td 3 500 руб
+										td 0 / 72
+										td: span.status.status--wait Ожидает
+
