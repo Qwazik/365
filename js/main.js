@@ -386,6 +386,7 @@ function reinvestirovat(data) {
 		return {
 
 			setValue: function(value){
+				value = value || 0;
 				sumValue = Number(String(value).replace(/ /g, ''));
 				calc.calculate();
 			},
@@ -399,7 +400,7 @@ function reinvestirovat(data) {
 				var month = +$('input[name="time-line"]:checked').val() / 12;
 				var income = (percent * month) * sumValue;
 				var sum = sumValue + income;
-				console.log(+$('input[name="time-line"]:checked').val());
+				// console.log(+$('input[name="time-line"]:checked').val());
 				sumSelector.text(digitSpace(Math.round(sum)));
 				incomeSelector.text(digitSpace(Math.round(income)));
 			},
@@ -427,7 +428,7 @@ function reinvestirovat(data) {
             method: method
           });
       request.done(function(xhr){
-         console.log(xhr);
+         // console.log(xhr);
          bodyForm.removeClass('sending');
          bodyForm.addClass('sent');
       });
@@ -449,8 +450,8 @@ $(document).ready(function(){
 		var symbols = $(this).data('cut');
 		var text = $(this).text().trim();
 		if(text.length > symbols){
-			console.log(text);
-			console.log(symbols-1, text.lastIndexOf())
+			// console.log(text);
+			// console.log(symbols-1, text.lastIndexOf())
 			text = text.substring(symbols-1, text.lastIndexOf());
 			$(this).text(text+'...');
 		}
