@@ -5098,6 +5098,8 @@ section, .section {
   .features-circle .text p {
     margin: 1.5625rem 0; }
   .features-circle .text .count {
+    display: block;
+    width: 100%;
     font-weight: bold;
     text-transform: uppercase;
     color: #121212;
