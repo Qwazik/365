@@ -79,38 +79,7 @@ $(function(){
 		});
 	}());
 
-	(function(){
-		var calcRangeSlider = $('#calcSliderInit')[0];
-		if ($('#calcSliderInit').length) {
-			var output = $(calcRangeSlider).closest('.calc-param').find('.slider-value');
-
-			noUiSlider.create(calcRangeSlider, {
-				start: 10000,
-				step: 1000,
-				connect: [true, false],
-				range: {
-					min: 10000,
-					max: 10000000
-				},
-				format: wNumb({
-					decimals: 0,
-					thousand: ' '
-				}),
-				pips: {
-					mode: 'count',
-					values: '7',
-					density: 1.5
-				}
-			});
-			output.change(function(){
-				calcRangeSlider.noUiSlider.set([this.value, null]);
-			});
-			calcRangeSlider.noUiSlider.on('update', function(values, handle){
-				output.val(values[handle]);
-				calc.setValue(values[handle]);
-			});
-		}
-	}());
+	
 
 	(function(){
 		var offset = 120;
@@ -406,6 +375,42 @@ function reinvestirovat(data) {
 			},
 		}
 	}(jQuery));
+
+
+	(function(){
+		var calcRangeSlider = $('#calcSliderInit')[0];
+		if ($('#calcSliderInit').length) {
+			var output = $(calcRangeSlider).closest('.calc-param').find('.slider-value');
+
+			noUiSlider.create(calcRangeSlider, {
+				start: 10000,
+				step: 1000,
+				connect: [true, false],
+				range: {
+					min: 10000,
+					max: 10000000
+				},
+				format: wNumb({
+					decimals: 0,
+					thousand: ' '
+				}),
+				pips: {
+					mode: 'count',
+					values: '7',
+					density: 1.5
+				}
+			});
+			output.change(function(){
+				calcRangeSlider.noUiSlider.set([this.value, null]);
+			});
+			calcRangeSlider.noUiSlider.on('update', function(values, handle){
+				output.val(values[handle]);
+				calc.setValue(values[handle]);
+			});
+		}
+	}());
+
+	
 	$('input[name="time-line"]').change(calc.calculate);
 
 	$('.modal-form form').submit(function(){
